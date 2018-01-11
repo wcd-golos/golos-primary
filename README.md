@@ -1,6 +1,6 @@
-# golos-primary
+# Overview
 
-MVP of Golos.io integration
+MVP of Golos.io integration - [Market] (https://golos.wecandevelopit.com/)
 
 ## Основная идея
 
