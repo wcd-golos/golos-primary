@@ -1,6 +1,6 @@
-# Overview
+# Обзор
 
-MVP of Golos.io integration - [Market](https://golos.wecandevelopit.com/)
+MVP для интеграции Golos.io - проект [Market](https://golos.wecandevelopit.com/)
 
 ## Основная идея
 
