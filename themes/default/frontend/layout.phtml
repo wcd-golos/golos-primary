@@ -1,0 +1,250 @@
+<?php
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8');
+$this->headMeta()->appendName('revisit-after', '7 days');
+$this->headMeta()->appendName('robots', 'index,follow');
+$this->headMeta()->appendName('copyright', '2012-'. date('Y') .' Market. All Rights Reserved.');
+
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/plugins/font-awesome/css/font-awesome.min.css');
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/plugins/bootstrap/css/bootstrap.min.css');
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/plugins/fancybox/source/jquery.fancybox.css');
+$this->headLink()->appendStylesheet('https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/plugins/bxslider/jquery.bxslider.css');
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/plugins/rateit/src/rateit.css');
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/plugins/uniform/css/uniform.default.css');
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/css/style-metronic.css');
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/css/style.css');
+$this->headLink()->appendStylesheet($this->BaseUrl . '/themes/default/assets/css/custom.css');
+
+
+$this->headScript()->setAllowArbitraryAttributes(true);
+
+$paramTitle = $this->headTitle()->getContainer()->toString();
+$this->headTitle('Market', Zend_View_Helper_Placeholder_Container_Abstract::SET); // append brand name to title
+
+echo $this->doctype();
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="en">
+<head>
+<meta name="og:type" content="website" />
+<?=$this->headTitle();?>
+<?=$this->headMeta();?>
+<!-- Fonts START -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=all" rel="stylesheet" type="text/css">
+<!-- Fonts END -->
+<?=$this->headLink();?>
+<?=$this->headStyle();?>
+</head>
+
+<body>
+
+<!-- BEGIN TOP BAR -->
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+                <!-- BEGIN TOP BAR LEFT PART -->
+                <div class="col-md-6 col-sm-6 additional-shop-info">
+                </div>
+                <!-- END TOP BAR LEFT PART -->
+                <!-- BEGIN TOP BAR MENU -->
+                <div class="col-md-6 col-sm-6 additional-nav">
+                    <ul class="list-unstyled list-inline pull-right">
+                        <li><a href="#login-pop-up" class="fancybox-fast-view" id="loginLink">Войти</a></li>
+                    </ul>
+                </div>
+                <!-- END TOP BAR MENU -->
+            </div>
+        </div>        
+    </div>
+    <!-- END TOP BAR -->
+
+    <!-- BEGIN HEADER -->
+    <div role="navigation" class="navbar header no-margin">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="sr-only">Навигация</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <a href="#" class="navbar-brand"><img src="/themes/default/assets/img/logo_red.png" alt="Market"></a><!-- LOGO -->
+            </div>
+            <!-- BEGIN NAVIGATION -->
+            <div class="collapse navbar-collapse mega-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" data-delay="0" data-close-others="false" data-target="#" href="#">
+                        Женщинам 
+                      </a>
+                    </li>
+                    <li><a href="#">Мужчинам</a></li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" data-delay="0" data-close-others="false" data-target="#" href="#">
+                        Детям
+                      </a>
+                    </li>
+                    <!-- BEGIN TOP SEARCH -->
+                    <li class="menu-search">
+                        <span class="sep"></span>
+                        <i class="fa fa-search search-btn"></i>
+                        <div class="search-box">
+                            <form action="#">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Искать" class="form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">Поиск</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div> 
+                    </li>
+                    <!-- END TOP SEARCH -->
+                </ul>
+            </div>
+            <!-- END NAVIGATION -->
+        </div>
+    </div>
+    <!-- END HEADER -->
+
+	<?=$this->layout()->content; ?>
+
+    <!-- BEGIN PRE-FOOTER -->
+    <div class="pre-footer">
+      <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+          <!-- BEGIN SOCIAL ICONS -->
+          <div class="col-md-6 col-sm-6">
+            <ul class="social-icons">
+              <li><a class="rss" data-original-title="rss" href="#"></a></li>
+              <li><a class="facebook" data-original-title="facebook" href="#"></a></li>
+              <li><a class="twitter" data-original-title="twitter" href="#"></a></li>
+              <li><a class="googleplus" data-original-title="googleplus" href="#"></a></li>
+              <li><a class="linkedin" data-original-title="linkedin" href="#"></a></li>
+              <li><a class="youtube" data-original-title="youtube" href="#"></a></li>
+              <li><a class="vimeo" data-original-title="vimeo" href="#"></a></li>
+              <li><a class="skype" data-original-title="skype" href="#"></a></li>
+            </ul>
+          </div>
+          <!-- END SOCIAL ICONS -->
+          <!-- BEGIN NEWLETTER -->
+          <div class="col-md-6 col-sm-6">
+            <div class="pre-footer-subscribe-box pull-right">
+              <h2>Новостная рассылка</h2>
+              <form action="#">
+                <div class="input-group">
+                  <input type="text" placeholder="youremail@mail.com" class="form-control">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Подписаться</button>
+                  </span>
+                </div>
+              </form>
+            </div> 
+          </div>
+          <!-- END NEWLETTER -->
+        </div>
+      </div>
+    </div>
+    <!-- END PRE-FOOTER -->
+
+    <!-- BEGIN FOOTER -->
+    <div class="footer padding-top-15">
+      <div class="container">
+        <div class="row">
+          <!-- BEGIN COPYRIGHT -->
+          <div class="col-md-6 col-sm-6 padding-top-10">
+            2014 © Market. ALL Rights Reserved. 
+          </div>
+          <!-- END COPYRIGHT -->
+          <!-- BEGIN PAYMENTS -->
+          <div class="col-md-6 col-sm-6">
+          </div>
+          <!-- END PAYMENTS -->
+        </div>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <div id="login-pop-up" style="display: none; width: 500px;">
+    	<div class="product-page product-pop-up">
+    	<div class="row">
+          <div class="col-md-12 col-sm-12">
+            <h1>Войти</h1>
+            <div class="content-form-page">
+              <div class="row">
+                <div class="col-md-12 col-sm-12">
+                  <form class="form-horizontal form-without-legend" role="form" id="frmLogin">
+                    <div class="form-group">
+                      <label for="email" class="col-lg-4 control-label">Имя пользователя <span class="require">*</span></label>
+                      <div class="col-lg-8">
+                        <input type="text" class="form-control" name="name" placeholder="Введи свое имя пользователя">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="col-lg-4 control-label">Пароль <span class="require">*</span></label>
+                      <div class="col-lg-8">
+                        <input type="password" class="form-control" name="password" placeholder="Пароль или WIF">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-20">
+                        <button type="submit" class="btn btn-primary">Войти</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Load javascripts at bottom, this will reduce page load time -->
+    <!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+    <!--[if lt IE 9]>
+    <script src="/themes/default/assets/plugins/respond.min.js"></script>  
+    <![endif]-->  
+    <script src="/themes/default/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="/themes/default/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="/themes/default/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>      
+    <script type="text/javascript" src="/themes/default/assets/plugins/back-to-top.js"></script>    
+    <script type="text/javascript" src="/themes/default/assets/plugins/jQuery-slimScroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="/themes/default/assets/plugins/jquery.blockui.min.js"></script>
+    <!-- END CORE PLUGINS -->
+
+    <!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) -->
+    <script type="text/javascript" src="/themes/default/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/themes/default/assets/plugins/bxslider/jquery.bxslider.min.js"></script><!-- slider for products -->
+    <script src="/themes/default/assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script><!-- Quantity -->
+    <script src="/themes/default/assets/plugins/rateit/src/jquery.rateit.js" type="text/javascript"></script>
+    <script type="text/javascript" src='/themes/default/assets/plugins/zoom/jquery.zoom.min.js'></script><!-- product zoom -->
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script><!-- for slider-range -->
+    <script src="/themes/default/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript" ></script>
+    <script src="/themes/default/assets/plugins/jquery-validation/jquery.validate.min.js" type="text/javascript" ></script>
+    <script src="/themes/default/assets/plugins/jquery.cokie.min.js" type="text/javascript" ></script>
+    <script src="/themes/default/assets/plugins/golos.min.js" type="text/javascript" ></script>
+    <script src="/themes/default/assets/plugins/showdown.min.js" type="text/javascript" ></script>
+
+    <script type="text/javascript" src="/themes/default/assets/scripts/app.js"></script>   
+    <script type="text/javascript">
+      var golos = steem;
+      jQuery(document).ready(function() {
+        App.init();   
+        App.initBxSlider(); 
+        App.initImageZoom();
+        App.initSliderRange();
+        App.initUniform();
+        App.initTouchspin();
+        App.loginForm();
+      });
+    </script>
+    
+    <?php echo $this->inlineScript()?>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->
+</body>
+</html>

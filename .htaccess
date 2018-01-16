@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteRule ^robots.txt$ robots.txt [L]
+RewriteRule ^themes/(.*)$ themes/$1 [L]
+
+RewriteRule !\.(js|ico|gif|jpg|png|css|swf|jar|conf|ttc|mp3|xml|flv|zip|eot|woff|ttf|svg|otf)$ index.php [L]
